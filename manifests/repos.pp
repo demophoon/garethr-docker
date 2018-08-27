@@ -23,6 +23,7 @@ class docker::repos {
           repos             => $docker::package_repos,
           key               => $package_key,
           key_source        => $key_source,
+          architecture      => 'amd64',
           required_packages => 'debian-keyring debian-archive-keyring',
           include_src       => false,
         }
